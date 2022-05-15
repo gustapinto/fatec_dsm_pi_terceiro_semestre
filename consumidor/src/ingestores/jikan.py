@@ -13,6 +13,9 @@ class JikanIngestor:
         return [anime['id'] for anime in animes]
 
     def ingerir_estatisticas(self, ids):
+        estatisticas = []
         for id in ids:
-            estatisticas = self.extrator.obtem_estatisticas_anime(id)
-            self.carregador.salvar('estatisticas', estatisticas)
+            estatistica = self.extrator.obtem_estatisticas_anime(id)
+            estatisticas.append(estatistica)
+
+        self.carregador.salvar('estatisticas', estatisticas)

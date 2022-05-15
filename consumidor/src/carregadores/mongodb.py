@@ -10,4 +10,7 @@ class MongoCarregador:
         banco_de_dados = self.cliente[self.banco]
         colecao = banco_de_dados[colecao]
 
-        colecao.insert_many(dados)
+        try:
+            colecao.insert_many(dados)
+        except TypeError:
+            pass
