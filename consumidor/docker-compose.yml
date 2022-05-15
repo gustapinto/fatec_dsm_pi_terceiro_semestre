@@ -1,0 +1,33 @@
+version: "3.6"
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    working_dir: /consumidor
+    volumes:
+      - ./:/consumidor:Z
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db/:/data/db:Z
+    networks:
+      - backend
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME: consumidor
+      - MONGO_INITDB_ROOT_PASSWORD: consumidor
+      - MONGO_INITDB_DATABASE: admin
+
+networks:
+  backend:
+    driver: bridge
