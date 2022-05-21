@@ -1,5 +1,3 @@
-Grupo: Gusatavo, Joziane, Luis, Wendell
-
 # Motivos para a escolha do Mongo DB como banco de dados
 
 O MongoDB foi escolhido como banco de dados para os dados ingeridos da API Jikan, por conta dele utilizar um modelo de dados baseado em documentos BSON, simplificando a perpetuação dos dados da API (respostas no formato JSON), também permitindo uma fácil replicação, escalonamento e gestão de multiplos modelos de dados, tornando possível uma expansão do consumo para outras APIs, além de garantir uma maior performance de leitura, o que é crucial, já que utilizaremos esses dados para gerar gráficos e inteligência, outro fator de suma importância para a escolha do MongoDB foi seu *client* para Python, que torna a interação com o banco simples e eficiente.
