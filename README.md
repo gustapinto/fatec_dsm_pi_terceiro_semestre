@@ -1,4 +1,4 @@
-# Consumidor de dados de Animes
+# Anitrends
 
 ## Sobre
 Uma pĺataforma de análise de dados de visualização de animes, fornecendo métricas e tendências para auxiliar lojistas e consumidores sobre em qual série de produtos (esqtoque) comprar
