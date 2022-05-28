@@ -10,11 +10,11 @@
         Iniciar sessão
     </h2>
 
-    <form method="post" class="">
+    <form method="post">
         {% csrf_token %}
 
         <input type="email" name="login" class="form-control mb-2 rounded-4 border-primary" placeholder="&#x40; Login" style="font-family:Arial, FontAwesome">
-        <input type="password" name="password1" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Arial, FontAwesome">
+        <input type="password" name="password" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Arial, FontAwesome">
 
         <button class="btn btn-primary align-self-center d-block mx-auto my-3 btn-lg rounded-4" type="submit">
             Entrar
