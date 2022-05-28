@@ -11,7 +11,7 @@ Uma pĺataforma de análise de dados de visualização de animes, fornecendo mé
 3. No terminal crie uma venv com o comando `python -m venv venv` e a ative a venv com os comandos:<br/>
 3.1. Linux: `source venv/bin/activate`
 4. Com a venv ativa instale os requesitos do projeto com o comando:<br/>`pip install -r requirements.txt`
-5. Instale o MongoDB conforme as [intruções oficiais](https://www.mongodb.com/docs/manual/installation/)
+5. Instale o MongoDB conforme as [instruções oficiais](https://www.mongodb.com/docs/manual/installation/)
 6. Pronto! Agora basta executar o consumidor com o comando:<br/>`python main.py <connection string do mongo>`
 
 ## Recursos
