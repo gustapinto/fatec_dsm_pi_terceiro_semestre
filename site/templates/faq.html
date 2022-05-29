@@ -51,7 +51,7 @@
               <h5>Site </h5>
               <br>
               <h5>Rodapé</h5>
-              <p>Sobre</p>
+                <p>Sobre</p>
               <ul>
                   <li>Sobre Nós</li>
                   <li>Porque” AniTrends”</li>
@@ -64,7 +64,7 @@
                   <li>Perguntas frequentes</li>
                   <li>Benefícios</li>
                   <li>Política de Uso/Site</li>
-                </ul
+               </ul>
                <p>Legal</p>
             </div>
           </div>
@@ -81,29 +81,39 @@
                 Preencha os campos, clique em enviar e responderemos em até 24h (exemplo).
               </div>
             </div>
-            <br><br>
-            <div class="container">
-                <h3>Preencha o formulário:</h3>
-                <p></p>
-                <form>
-                  <div class="form-group">
-                    <label for="usr">Name:</label>
-                    <input type="text" class="form-control" id="usr">
-                  </div>
-                  <div class="form-group">
-                    <label for="mail">email:</label>
-                    <input type="email" class="form-control" id="mail">
-                  </div>
-                  <div class="form-group">
-                    <label for="comment">Comment:</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  
-                </form>
-              </div>
-          </div>g
-      
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Formulário:
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Fale conosco</strong>
+                    <p></p>
+                    <form>
+                      <div class="form-group">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
 
-      
+                      <div class="form-group">
+                        <label for="mail">Email:</label>
+                        <input type="email" class="form-control" id="mail">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="comment">Comentário:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+                      <br>
+                      <button type="button" class="btn btn-primary">Enviar</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+          </div>
+        </div>
     </div>
 {% endblock %}
