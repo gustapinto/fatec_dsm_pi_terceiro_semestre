@@ -1,9 +1,7 @@
 # Anitrends
 
-## Sobre
-Uma pĺataforma de análise de dados de visualização de animes, fornecendo métricas e tendências para auxiliar lojistas e consumidores sobre em qual série de produtos (esqtoque) comprar
-
 ## Conhecendo o projeto
+Uma pĺataforma de análise de dados de visualização de animes, fornecendo métricas e tendências para auxiliar lojistas e consumidores sobre em qual série de produtos (estoque) comprar. Para mais informações sobre o projeto visite:
 - [Trello e próximos objetivos](https://trello.com/b/5XD3KYVv/kanban-quadro-modelo)
 - [Design e guias de estilo](https://www.figma.com/file/nopgvzIdZ92Kc3PvaqbgIT/PI-3%C2%BA-Semestre?node-id=0%3A1)
 - [Projeto e canva](https://www.figma.com/file/O8bvikSwLEkF7w6Aq6K0ai/PM-Canva)
