@@ -2,13 +2,13 @@ from sys import argv
 
 from time import sleep
 
-from src.log import configura_logger
+from src.log import LoggingUtilitario
 from src.carregadores.mongodb import MongoCarregador
 from src.ingestores.jikan import JikanIngestor
 
 
 def main():
-    configura_logger()
+    LoggingUtilitario.configura()
 
     try:
         conexao = argv[1]

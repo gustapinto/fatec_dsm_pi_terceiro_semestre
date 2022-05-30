@@ -1,13 +1,10 @@
 from sys import stdout
-import logging
+from logging import INFO, basicConfig, StreamHandler, FileHandler
 
 
-def configura_logger():
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s %(levelname)-8s %(message)s',
-        handlers=[
-            logging.StreamHandler(stdout),
-            logging.FileHandler('consumidor.log'),
-        ],
-    )
+class LoggingUtilitario:
+    @staticmethod
+    def configura():
+        # Configura o logger global
+        basicConfig(level=INFO, format='%(asctime)s %(levelname)-8s %(message)s',
+                    handlers=[StreamHandler(stdout), FileHandler('consumidor.log')])
