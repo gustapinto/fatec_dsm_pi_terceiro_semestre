@@ -1,3 +1,4 @@
+import logging
 from src.extratores.jikan import JikanExtrator
 
 

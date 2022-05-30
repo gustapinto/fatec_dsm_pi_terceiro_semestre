@@ -1,4 +1,6 @@
-from requests import JSONDecodeError, get
+import logging
+
+from requests import get
 
 
 class JikanExtrator:
@@ -21,8 +23,10 @@ class JikanExtrator:
         for pagina in range(1, paginas + 1):
             parametros = {'page': pagina, 'filter': 'bypopularity'}
 
+            logging.info(f'Extraindo animes populares, página {pagina}')
             r = get(url, params=parametros)
             if not r.ok:
+                logging.error(f'Falha ao extrair animes populares, página {pagina}, código {r.status_code}')
                 break
 
             rjson = r.json()
@@ -35,8 +39,10 @@ class JikanExtrator:
     def obtem_estatisticas_anime(self, id):
         url = f'{self.URL}/anime/{id}/statistics'
 
+        logging.info(f'Extraindo estatisticas do anime {id}')
         r = get(url)
         if not r.ok:
+            logging.error(f'Falha ao extrair estatísticas do anime {id}, código {r.status_code}')
             return None
 
         rjson = r.json()

@@ -1,3 +1,4 @@
+import logging
 from pymongo import MongoClient
 
 
@@ -11,6 +12,10 @@ class MongoCarregador:
         colecao = banco_de_dados[colecao]
 
         try:
+            logging.info(f'Carregando {len(dados)} registros no banco de dados')
             colecao.insert_many(dados)
-        except TypeError:
-            pass
+        except Exception as e:
+            logging.error(f'Falha ao carregar {len(dados)} registros no banco de dados, erro {e}')
+            return
+
+        logging.info(f'Carregamento concluído com sucesso')
