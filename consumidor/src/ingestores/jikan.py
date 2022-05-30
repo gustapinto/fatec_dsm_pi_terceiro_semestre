@@ -17,6 +17,8 @@ class JikanIngestor:
         estatisticas = []
         for id in ids:
             estatistica = self.extrator.obtem_estatisticas_anime(id)
+            if not estatistica:
+                continue
             estatisticas.append(estatistica)
 
         self.carregador.salvar('estatisticas', estatisticas)
