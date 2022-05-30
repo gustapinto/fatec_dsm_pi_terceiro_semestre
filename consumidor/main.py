@@ -13,7 +13,8 @@ def main():
     try:
         conexao = argv[1]
     except IndexError:
-        print('Usar python main.py <connection_string>')
+        print('Executar consumidor como:')
+        print('python main.py "mongodb://<usuário>:<senha>@<host>:<porta>"')
         return
 
     carregador = MongoCarregador('animes', conexao)
