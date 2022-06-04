@@ -5,67 +5,75 @@
 {% load static %}
 
 {% block content %}
-<div class="mt-5 _mt-10">
-    <div class="row">
-        <div class="col-12 col-md-6 text-center">
-            <img src="{% static 'img_pokebola.png' %}" class="img-lateral">
-        </div>
+<div>
+    <div class="_pd-10">
+        <div class="container row mx-auto">
+            <div class="col-12 col-md-6 text-center">
+                <img src="{% static 'img_pokebola.png' %}" class="img-lateral">
+            </div>
 
-        <div class="col-12 col-md-6 align-self-center">
-            <h1 class="px-5 fw-bolder">
-                Anitrends: O seu primeiro visualizador de tendências em Animes!
-            </h1>
+            <div class="col-12 col-md-6 align-self-center">
+                <h1 class="px-5 fw-bolder">
+                    Anitrends: O seu primeiro visualizador de tendências em Animes!
+                </h1>
+            </div>
         </div>
     </div>
 
-    <div class="row _mt-10">
-        <div class="align-self-center mx-5 ">
-            <h1 class="fw-bolder">
-                O que é o Anitrends?
-            </h1>
+    <div class="_pd-10">
+        <div class="container row mx-auto">
+            <div class="align-self-center mx-5 ">
+                <h1 class="fw-bolder">
+                    O que é o Anitrends?
+                </h1>
 
-            <p class="fs-5">
-                Anitrends é um comparador de tendências no mundo dos animes, feito para donos de negócios saberem quais produtos comprar baseado na popularidade da propriedade intelectual.
-            </p>
+                <p class="fs-5">
+                    Anitrends é um comparador de tendências no mundo dos animes, feito para donos de negócios saberem quais produtos comprar baseado na popularidade da propriedade intelectual.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="row _mt-10">
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px" class="align-self-center">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+    <div class="_pd-10 grupo-cards">
+        <div class="container row mx-auto">
+            <div class="col-12 col-md-4 text-center">
+                <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px" class="align-self-center">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="{% static 'placeholder-circle-300x300.png' %}" style="width: 200px">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="row _mt-10">
-        <div class="col-12 col-md-6">
-            <h1 class="px-5 fw-bolder mt-5">
-                Cadastre-se agora no Anitrends!
-            </h1>
+    <div class="_pd-10">
+        <div class="container row mx-auto">
+            <div class="col-12 col-md-6">
+                <h1 class="px-5 fw-bolder mt-5">
+                    Cadastre-se agora no Anitrends!
+                </h1>
 
-            <a class="btn btn-primary align-self-center d-block mx-auto my-3 btn-lg rounded-4 mt-5 w-50" href="{% url 'account_signup' %}" type="submit">
-                Quero me inscrever!
-            </a>
-        </div>
-        <div class="col-12 col-md-6 text-center">
-            <img src="{% static 'img_pokebola.png' %}" class="img-lateral" style="width: 400px">
+                <a class="btn btn-primary align-self-center d-block mx-auto my-3 btn-lg rounded-4 mt-5 w-50" href="{% url 'account_signup' %}" type="submit">
+                    Quero me inscrever!
+                </a>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <img src="{% static 'img_pokebola.png' %}" class="img-lateral" style="width: 400px">
+            </div>
         </div>
     </div>
 </div>

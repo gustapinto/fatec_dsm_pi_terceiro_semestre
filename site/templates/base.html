@@ -16,6 +16,7 @@
         :root {
             --cinza-claro: #ebebeb;
             --cinza-escuro: #1c1d21;
+            --cinza-escuro-bg:  #2d2d2d;
             --azul-escuro: #01558D;
             --branco: #fff;
         }
@@ -28,6 +29,14 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Nunito', sans-serif;
+        }
+
+        hr {
+            margin:  auto;
+            color: var(--azul-escuro);
+            background-color: var(--azul-escuro);
+            height: 2px;
+            border: 0 none;
         }
 
         .call {
@@ -62,6 +71,20 @@
 
         ._mt-10 {
             margin-top: 10em !important;
+        }
+
+        ._pd-10 {
+            padding-top: 5em !important;
+            padding-bottom: 5em !important;
+        }
+
+        ._mx-10 {
+            margin-right: 10em;
+            margin-left: 10em;
+        }
+
+        .grupo-cards {
+            background-color: var(--cinza-escuro-bg) !important;
         }
 
         .btn-primary {
@@ -119,7 +142,7 @@
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main class="container-flex">
         {% block content %}{% endblock %}
     </main>
     <br><br><br><br>
