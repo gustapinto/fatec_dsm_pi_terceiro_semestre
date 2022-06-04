@@ -17,6 +17,7 @@
             --cinza-claro: #ebebeb;
             --cinza-escuro: #1c1d21;
             --azul-escuro: #01558D;
+            --branco: #fff;
         }
 
         body {
@@ -27,6 +28,36 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Nunito', sans-serif;
+        }
+
+        .call {
+            padding-left: 2em;
+            padding-right: 2em;
+            font-weight: bolder;
+        }
+
+        .img-lateral {
+            width: 100%;
+            margin-top: -4em;
+        }
+
+        .btn-pill-navbar {
+            font-weight: bold !important;
+            padding-left: 2em !important;
+            padding-right: 2em !important;
+            background-color: var(--branco) !important;
+            color: var(--azul-escuro) !important;
+            border-radius: 10em !important;
+        }
+
+        .btn-circle-navbar {
+            font-weight: bold !important;
+            background-color: var(--branco) !important;
+            color: var(--azul-escuro) !important;
+            border-radius: 10em !important;
+            margin-right: 0.5em;
+            margin-left: 0.5em;
+            width: 2.7em;
         }
 
         ._mt-10 {
@@ -53,8 +84,7 @@
             color: var(--cinza-escuro) !important;
         }
 
-        .navbar-brand,
-        .nav-link {
+        .navbar-brand {
             color:  var(--cinza-claro) !important;
         }
     </style>
@@ -74,21 +104,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'configurat:configurat' %}" ><i class="fa-solid fa-gear"></i></a>
                        </li>
-                    {% else %}
-                        {% if not  'login' in request.path %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
-                            </li>
-                        {% endif %}
-                        {% if not  'signup' in request.path %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_signup' %}">Cadastro</a>
-                            </li>
-                        {% endif %}
                     {% endif %}
                     <li class="nav-item" >
-                         <a class="nav-link" href="{% url 'faq:faq' %}" >FAQ</a>
+                         <a class="nav-link btn btn-circle-navbar" href="{% url 'faq:faq' %}" >
+                             <i class="fa-solid fa-question"></i>
+                         </a>
                     </li>
+                    {% if not user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-pill-navbar" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

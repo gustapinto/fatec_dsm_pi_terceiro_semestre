@@ -9,13 +9,15 @@
 <div class="_mt-10">
     <div class="row">
         <div class="col-12 col-md-6 text-center">
-            <img src="{% static 'placeholder-circle-300x300.png' %}">
+            <img src="{% static 'img_pokebola.png' %}" class="img-lateral">
         </div>
         <div class="col-12 col-md-6">
-            <h1 class="w-100">
-                Cadastre-se<br/>
-                É gratuito!
-            </h1>
+            <p>
+                <h1 class="w-100 mb-0">
+                    Bem vindo!
+                </h1>
+                Cadastre-se. É gratuito!
+            </p>
 
             <form method="post" class="">
                 {% csrf_token %}
