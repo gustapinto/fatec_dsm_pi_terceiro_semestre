@@ -50,6 +50,11 @@
             margin-top: -4em;
         }
 
+        .bg-cinza-escuro {
+            background-color: var(--cinza-escuro-bg) !important;
+            color: var(--branco) !important;
+        }
+
         .btn-pill-navbar {
             font-weight: bold !important;
             padding-left: 2em !important;
@@ -62,7 +67,7 @@
         .btn-circle-navbar {
             font-weight: bold !important;
             background-color: var(--branco) !important;
-            color: var(--azul-escuro) !important;
+            color: var(--azul-escuro);
             border-radius: 10em !important;
             margin-right: 0.5em;
             margin-left: 0.5em;
@@ -120,20 +125,26 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'pages:home' %}">Anitrends</a>
                 <ul class="navbar-nav">
-                    {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Sair</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'configurat:configurat' %}" ><i class="fa-solid fa-gear"></i></a>
-                       </li>
-                    {% endif %}
                     <li class="nav-item" >
                          <a class="nav-link btn btn-circle-navbar" href="{% url 'faq:faq' %}" >
                              <i class="fa-solid fa-question"></i>
                          </a>
                     </li>
-                    {% if not user.is_authenticated %}
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-circle-navbar" href="{% url 'configurat:configurat' %}" >
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                       </li>
+                       <li class="nav-item">
+                            <form method="post" action="{% url 'account_logout' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="nav-link btn btn-circle-navbar text-danger">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </button>
+                            </form>
+                        </li>
+                    {% else %}
                         <li class="nav-item">
                             <a class="nav-link btn btn-pill-navbar" href="{% url 'account_login' %}">Login</a>
                         </li>
