@@ -6,22 +6,20 @@
 
 {% block content %}
 
-<div class="container-lg">
+<div class="container my-5">
     <!-- Content here -->
   
-    <br><br>
     <div class="row">
       <div class="col-6 md-4">
-        <h1>FAQ: Perguntas e Respostas</h1>
+        <h1 class="fw-bolder">FAQ: Perguntas e Respostas</h1>
         <br>
         <p>Nesta área/página  nós temos as perguntas mais frequentes sobre o Anitrends, clique na pergunta para mostrar a resposta, clique novamente para escondê-la. </p>
       </div>
     </div>
-
     <div class="row">
       <div class="col-1">
         <div class="p-3 mb-2 bg-dark text-white rounded">
-          <i class="fa-thin fa-circle-chevron-down"></i>
+          <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
         </div>
       </div>
   
@@ -30,14 +28,14 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h6>O Anitrends é gratuito?</h6>
+                <h6 class= "aumentaH6">O Anitrends é gratuito?</h6>
             </button>
           </h2>
         </div>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
             <div class="p-3 mb-2 bg-dark text-white rounded">
-              <p  class="font-weight-light">Sim, todas as funções do sistema poderão ser utilizadas de forma totalmente gratuita.</p>
+              <p  class="letterThin">Sim, todas as funções do sistema poderão ser utilizadas de forma totalmente gratuita.</p>
             </div>
             </div>
           </div>
@@ -48,7 +46,7 @@
    <div class="row">
     <div class="col-1">
       <div class="p-3 mb-2 bg-dark text-white rounded">
-        <i class="fa-thin fa-circle-chevron-down"></i>
+        <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
       </div>
     </div>
 
@@ -57,14 +55,14 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <h6>Como faço para me cadastrar?</h6>
+          <h6 class="aumentaH6">Como faço para me cadastrar?</h6>
           </button>
         </h2>
       </div>
         <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
           <div class="p-3 mb-2 bg-dark text-white rounded">
-            <p  class="font-weight-light">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p  class="letterThin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
           </div>
           </div>
         </div>
@@ -75,7 +73,7 @@
  <div class="row">
   <div class="col-1">
     <div class="p-3 mb-2 bg-dark text-white rounded">
-      <i class="fa-thin fa-circle-chevron-down"></i>
+      <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
     </div>
   </div>
 
@@ -84,14 +82,14 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingThree">
         <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <h6>Como faço para comprar Animes?</h6>
+          <h6 class="aumentaH6">Como faço para comprar Animes?</h6>
         </button>
       </h2>
     </div>
       <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div class="accordion-body">
         <div class="p-3 mb-2 bg-dark text-white rounded">
-          <p  class="font-weight-light">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          <p  class="letterThin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         </div>
         </div>
       </div>
@@ -99,8 +97,16 @@
   </div>
 </div>
 </div>
-
-  </div>
- <br><br>
-  
+</div>
+<br>
+<div class="bg-cinza-escuro p-5">
+  <div class="container">
+      <div class="row">
+          <div class="col text-center d-flex flex-row">
+              <img src="{% static 'image_faq.png' %}" class="float-lg-left" style="max-width:70%" >
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 {% endblock %}
