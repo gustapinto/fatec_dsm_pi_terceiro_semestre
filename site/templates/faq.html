@@ -2,88 +2,111 @@
 
 {% block title %}Anitrends{% endblock %}
 
+{% load static %}
+
 {% block content %}
-<div class="container-lg">
+
+<div class="container my-5">
     <!-- Content here -->
   
-    <h3>Perguntas Frequentes</h3>
-    
-    <br>
-    <div class="accordion" id="accordionExample">
+    <div class="row">
+      <div class="col-6 md-4">
+        <h1 class="fw-bolder">FAQ: Perguntas e Respostas</h1>
+        <br>
+        <p>Nesta área/página  nós temos as perguntas mais frequentes sobre o Anitrends, clique na pergunta para mostrar a resposta, clique novamente para escondê-la. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1">
+        <div class="p-3 mb-2 bg-dark text-white rounded">
+          <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
+        </div>
+      </div>
+  
+      <div class="col-11 col-md-8">
+      <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Sobre Nosso Sistema
+            <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h6 class= "aumentaH6">O Anitrends é gratuito?</h6>
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        </div>
+          <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>O que nosso produto oferece?</strong> Um sistema web que permite a visualização de dados ( ex. a mudar gênero, tema, temporada) sobre tendências de animes.
+            <div class="p-3 mb-2 bg-dark text-white rounded">
+              <p  class="letterThin">Sim, todas as funções do sistema poderão ser utilizadas de forma totalmente gratuita.</p>
+            </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Sobre Valor ao Cliente
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>O que oferecemos aos nossos clientes?</strong> Visualização de dados pertinentes a caracterização de Anime como sendo uma tendência, além de ajudar o lojista em sua análise para aquisição de possíveis produtos no mercado, tendo como embasamento dados relevantes de usuários .
-            </div>
+        <br>
+      </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-1">
+      <div class="p-3 mb-2 bg-dark text-white rounded">
+        <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
+      </div>
+    </div>
+
+    <div class="col-11 col-md-8">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <h6 class="aumentaH6">Como faço para me cadastrar?</h6>
+          </button>
+        </h2>
+      </div>
+        <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <div class="p-3 mb-2 bg-dark text-white rounded">
+            <p  class="letterThin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Sobre Como Usar Site
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <p>A estrutura de navegação do site</p><br>
-             <h4><strong>Mapa do site</strong></h4>
-              <br>
-              <h5>Menu lojista </h5> 
-              <br>  
-              <h5>Site </h5>
-              <br>
-              <h5>Rodapé</h5>
-                <p>Sobre</p>
-              <ul>
-                  <li>Sobre Nós</li>
-                  <li>Porque” AniTrends”</li>
-                  <li>Benefícios</li>
-                  <li>Mapa do Site</li>
-              </ul>
-               <p>Links úteis</p>
-               <ul>
-                  <li>Fale conosco/Sugestões</li>
-                  <li>Perguntas frequentes</li>
-                  <li>Benefícios</li>
-                  <li>Política de Uso/Site</li>
-               </ul>
-               <p>Legal</p>
-            </div>
+      <br>
+    </div>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-1">
+    <div class="p-3 mb-2 bg-dark text-white rounded">
+      <i class="fa-solid fa-circle-chevron-down fa-2x center"></i>
+    </div>
+  </div>
+
+  <div class="col-11 col-md-8">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button bg-dark text-white rounded " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          <h6 class="aumentaH6">Como faço para comprar Animes?</h6>
+        </button>
+      </h2>
+    </div>
+      <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <div class="p-3 mb-2 bg-dark text-white rounded">
+          <p  class="letterThin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+        </div>
+      </div>
+    <br>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<div class="bg-cinza-escuro p-5">
+  <div class="container">
+      <div class="row">
+          <div class="col text-center d-flex flex-row">
+              <img src="{% static 'image_faq.png' %}" class="float-lg-left" style="max-width:70%" >
           </div>
         </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Fale Conosco
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <strong>Envie-nos um email:</strong> É através desse email que esclarecemos dúvidas, recebemos críticas ou solicitações relacionadas ao sistema.
-                Responderemos em até 24h.
-              </div>
-            </div>
-        </div>
-        <!--Nova seção conforme figma -->
-        
-        </div>
-      <br><br>
-  
+      </div>
+    </div>
+</div>
 {% endblock %}

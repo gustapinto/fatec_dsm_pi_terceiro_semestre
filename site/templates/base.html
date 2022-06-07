@@ -115,6 +115,22 @@
         .navbar-brand {
             color:  var(--cinza-claro) !important;
         }
+        
+        .center{
+            text-align:center;
+            width:100%;
+        }
+        .accordion-button{
+            
+        }
+        .aumentaH6{
+            font-size:22px !important;
+        }
+        .letterThin{
+            font-size:18px !important;
+            font-family:Robot !important;
+        }
+    </style>
     </style>
 
     <title>{% block title %}{% endblock %}</title>
@@ -144,6 +160,7 @@
                                 </button>
                             </form>
                         </li>
+                    {% elif  user.authenticated %}
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link btn btn-pill-navbar" href="{% url 'account_login' %}">Login</a>
