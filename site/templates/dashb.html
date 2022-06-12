@@ -5,37 +5,30 @@
 {% load static %}
 
 {% block content %}
-
-<div class="container"><br><br>
-    <h2>Mais Visto da semana</h2>
-    <div class="row">
-        
-        <div class="col bg-cinza-escuro rounded-4 text-center top1">
-            <br>
-
+<div class="container"><br>
+    <h1 class="bold">Mais Visto da Estação</h1>
+        <div class="row">
             
-            <canvas id="visto_semana" width="250" height="200"></canvas>
-        </div>
-        
-        <div class="col bg-cinza-escuro rounded-4 text-center top">
-            <br>
-            <h2>Legendas</h2>
-            <canvas id="legendas" width="250" height="100"></canvas>
-        </div>
-
+                <div class="col bg-cinza-escuro rounded-4 text-center top1">
+                <canvas id="myChart" width="200" height="200"></canvas>
+                </div>
+                <div class="col  rounded-4 alinha">
+                 <h2 class=" p-4 aumenta">Legendas</h2>
+                        <p><i class="fa-solid fa-circle fa-2xl"></i>  Anime 1</p>
+                        <p><i class="fa-solid fa-circle fa-2xl"></i>  Anime 2</p>
+                        <p><i class="fa-solid fa-circle fa-2xl"></i>  Anime 3</p>
+                        <p><i class="fa-solid fa-circle fa-2xl"></i>  Anime 4</p>
+                        <p><i class="fa-solid fa-circle fa-2xl"></i>  Anime 4</p>
+                     </div>
+                </div>
+            </div>
     </div>
-
-    
-
-
-</div>
     <br>
     <div class="bg-cinza-escuro p-5 ">
     <div class="container-md">
         <div class="row">
             <div class="col text-center">
                 <h1 class="h31">Nuvem de Palavra</h1>
-                palavras  aqui
             </div>
           </div>
         </div>
@@ -44,22 +37,43 @@
     <br>
 
     <div class="container"><br><br>
-        <h1>Ranking de Visualização</h1>
+        <h1 class="bold">Ranking de Visualização</h1>
         <div class="row">
             
-            <div class="col bg-cinza-escuro rounded-4 text-center top1">
+            <div class="col bg-cinza-escuro rounded-4  top1">
                 <br>
     
                 <h2>Sempre no topo</h2>
-                <canvas id="ranking" width="250" height="200"></canvas>
+                <div class="parag">
+                <p><aumenta>1°</aumenta> Fullmetal Alchemist: Brotherhood</p>
+                <p><aumenta>2°</aumenta> Gintama°</p>
+                <p><aumenta>3°</aumenta> Steins;Gate</p>
+                <p><aumenta>4°</aumenta>Shingeki no Kyojin Season 3 Part 2</p>
+                <p><aumenta>5°</aumenta> Gintama'</p>
+               
+                </div>
+            
             </div>
             
-            <div class="col bg-cinza-escuro rounded-4 text-center top">
+            <div class="col bg-cinza-escuro rounded-4  top">
                 <br>
                 <h2>Novidades da Semana</h2>
-                <canvas id="novidades" width="250" height="200"></canvas>
-            </div>
+                <div class="parag">
+                    <p><aumenta>1°</aumenta> Fullmetal Alchemist: Brotherhood</p>
+                    <p><aumenta>2°</aumenta> Gintama°</p>
+                    <p><aumenta>3°</aumenta> Steins;Gate</p>
+                    <p><aumenta>4°</aumenta>Shingeki no Kyojin Season 3 Part 2</p>
+                    <p><aumenta>5°</aumenta> Gintama'</p>
+                   
+                    </div>
     
         </div>
-    
-{% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{% static 'js/js.js' %}"></script>
+        <script>
+        const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+        );
+        </script>
+        {% endblock %}
