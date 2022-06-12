@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'faq',
     'configurat',
+    'dashb',
     
 ]
 

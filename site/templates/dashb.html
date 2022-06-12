@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Anitrends{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container"><br><br>
+    <h2>Mais Visto da semana</h2>
+    <div class="row">
+        
+        <div class="col bg-cinza-escuro rounded-4 text-center top1">
+            <br>
+
+            
+            <canvas id="visto_semana" width="250" height="200"></canvas>
+        </div>
+        
+        <div class="col bg-cinza-escuro rounded-4 text-center top">
+            <br>
+            <h2>Legendas</h2>
+            <canvas id="legendas" width="250" height="100"></canvas>
+        </div>
+
+    </div>
+
+    
+
+
+</div>
+    <br>
+    <div class="bg-cinza-escuro p-5 ">
+    <div class="container-md">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="h31">Nuvem de Palavra</h1>
+                palavras  aqui
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container"><br><br>
+        <h1>Ranking de Visualização</h1>
+        <div class="row">
+            
+            <div class="col bg-cinza-escuro rounded-4 text-center top1">
+                <br>
+    
+                <h2>Sempre no topo</h2>
+                <canvas id="ranking" width="250" height="200"></canvas>
+            </div>
+            
+            <div class="col bg-cinza-escuro rounded-4 text-center top">
+                <br>
+                <h2>Novidades da Semana</h2>
+                <canvas id="novidades" width="250" height="200"></canvas>
+            </div>
+    
+        </div>
+    
+{% endblock %}

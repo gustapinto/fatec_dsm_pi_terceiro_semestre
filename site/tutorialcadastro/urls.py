@@ -23,7 +23,9 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     #local
     path('', include('pages.urls', namespace='pages')),
+    path('dashb/', include('dashb.urls', namespace='dashb')),
     path('faq/', include('faq.urls', namespace='faq')),
     path('configurat/', include('configurat.urls', namespace='configurat')),
+    
 ]
 
