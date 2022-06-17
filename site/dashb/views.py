@@ -8,4 +8,3 @@ class DashbView(TemplateView):
 
 #def dashb(request):
    # return HttpResponse('teste')
-    
