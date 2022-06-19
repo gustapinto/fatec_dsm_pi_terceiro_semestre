@@ -6,77 +6,84 @@
 
 {% block content %}
 <div class="container"><br>
-    <h1 class="bold">Mais Visto da Estação</h1>
-        <div class="row">
-            <div class="col bg-cinza-escuro rounded-4 text-center top1">
-                <canvas id="myChart" width="400" height="350"></canvas>
-            </div>
-                <div class="col rounded-4 alinha">
-                 <h2 class=" p-4 aumenta bold">Legenda</h2>
-                        <p><i class="fa-solid fa-circle fa-2xl pinkcor"></i>  Spy x Family</p>
-                        <p><i class="fa-solid fa-circle fa-2xl oranjcor"></i>  Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu </p>
-                        <p><i class="fa-solid fa-circle fa-2xl yellowcor"></i>  Kaguya-sama wa Kokurasetai: Ultra Romantic</p>
-                        <p><i class="fa-solid fa-circle fa-2xl turqcor"></i>  Aharen-san wa Hakarenai</p>
-                        <p><i class="fa-solid fa-circle fa-2xl blue"></i> Tate no Yuusha no Nariagari Season 2</p>
-                        <p><i class="fa-solid fa-circle fa-2xl purpcor"></i> Tomodachi Game</p>
-                        <p><i class="fa-solid fa-circle fa-2xl graycor"></i> Agotome Game Sekai wa Mob ni Kibishii Sekai desuo</p>
-                     </div>
-                </div>
-            </div>
-    </div>
-    <br>
-    <div class=" bg-light">
-        <img src="{% static 'nuvem.png' %}" class="img-fluid">
-    </div>
-    <br>
-
-    <div class="container"><br><br>
-        <h1 class="bold">Ranking de Visualização</h1>
-        <div class="row">
-            
-            <div class="col bg-cinza-escuro rounded-4  top1">
-                <br>
-    
-                <h2>Sempre no topo</h2>
-                <div class="parag">
-                <p><aumenta>1 °</aumenta> Fullmetal Alchemist: Brotherhood</p>
-                <p><aumenta>2 °</aumenta> Gintama°</p>
-                <p><aumenta>3 °</aumenta> Steins;Gate</p>
-                <p><aumenta>4 °</aumenta> Shingeki no Kyojin Season 3 Part 2</p>
-                <p><aumenta>5 °</aumenta> Gintama'</p>
-                <p><aumenta>6 °</aumenta> Gintama: The Final </p>
-                <p><aumenta>7 °</aumenta> Hunter x Hunter (2011)</p>
-                <p><aumenta>8 °</aumenta> Fruits Basket: The Final </p>
-                <p><aumenta>9 °</aumenta> Gintama': Enchousen </p>
-                <p><aumenta>10 °</aumenta> Ginga Eiyuu Densetsu </p>
-                </div>
-            
-            </div>
-            
-            <div class="col bg-cinza-escuro rounded-4  top">
-                <br>
-                <h2>Lista Animes Primavera 2022</h2>
-                <div class="parag">
-                    <p><aumenta>- </aumenta> Spy x Family</p>
-                    <p><aumenta>- </aumenta> Tate no Yuusha no Nariagari Season 2</p>
-                    <p><aumenta>- </aumenta> Kaguya-sama wa Kokurasetai: Ultra Romantic</p>
-                    <p><aumenta>- </aumenta> Kawaii dake ja Nai Shikimori-san</p>
-                    <p><aumenta>- </aumenta> Komi-san wa, Comyushou desu. 2nd Season</p>
-                    <p><aumenta>- </aumenta> Aharen-san wa Hakarenai</p>
-                    <p><aumenta>- </aumenta> Summertime Render</p>
-                    <p><aumenta>- </aumenta> Tomodachi Game</p>
-                    <p><aumenta>- </aumenta> Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu</p>
-                    <p><aumenta>- </aumenta> Yuusha, Yamemasu</p>
-                   
-            </div>
-    
+    <h1 class="bold">
+        Mais vistos da semana
+    </h1>
+    <div>
+        <div class="col bg-cinza-escuro rounded-4 text-center top1 p-4" style="height: 450px">
+            <canvas id="myChart"></canvas>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="{% static 'js/js.js' %}"></script>
-        <script>
-        const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-        );
-        </script>
-        {% endblock %}
+    </div>
+</div>
+</div>
+<br>
+<div class=" bg-light">
+    <img src="{% static 'nuvem.png' %}" class="img-fluid">
+</div>
+<br>
+
+<div class="container"><br><br>
+    <h1 class="bold">Ranking de Visualização</h1>
+    <div class="row">
+
+        <div class="col bg-cinza-escuro rounded-4  top1">
+            <br>
+
+            <h2>Sempre no topo</h2>
+            <div class="parag">
+                <p><aumenta>1°</aumenta> Fullmetal Alchemist: Brotherhood</p>
+                <p><aumenta>2°</aumenta> Gintama°</p>
+                <p><aumenta>3°</aumenta> Steins;Gate</p>
+                <p><aumenta>4°</aumenta> Shingeki no Kyojin Season 3 Part 2</p>
+                <p><aumenta>5°</aumenta> Gintama'</p>
+                <p><aumenta>6°</aumenta> Gintama: The Final </p>
+                <p><aumenta>7°</aumenta> Hunter x Hunter (2011)</p>
+                <p><aumenta>8°</aumenta> Fruits Basket: The Final </p>
+                <p><aumenta>9°</aumenta> Gintama': Enchousen </p>
+                <p><aumenta>10°</aumenta> Ginga Eiyuu Densetsu </p>
+            </div>
+
+        </div>
+
+        <div class="col bg-cinza-escuro rounded-4  top">
+            <br>
+            <h2>Novidades da semana</h2>
+            <div class="parag">
+                <p><aumenta>1º</aumenta> Spy x Family</p>
+                <p><aumenta>2º</aumenta> Tate no Yuusha no Nariagari Season 2</p>
+                <p><aumenta>3º</aumenta> Kaguya-sama wa Kokurasetai: Ultra Romantic</p>
+                <p><aumenta>4º</aumenta> Kawaii dake ja Nai Shikimori-san</p>
+                <p><aumenta>5º</aumenta> Komi-san wa, Comyushou desu. 2nd Season</p>
+                <p><aumenta>6º</aumenta> Aharen-san wa Hakarenai</p>
+                <p><aumenta>7º</aumenta> Summertime Render</p>
+                <p><aumenta>8º</aumenta> Tomodachi Game</p>
+                <p><aumenta>9º</aumenta> Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu</p>
+                <p><aumenta>10º</aumenta> Yuusha, Yamemasu</p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/js.js' %}"></script>
+
+<script>
+    const chartConfig = {
+        type: 'bar',
+        data: JSON.parse("{{ chart_data|escapejs }}"),
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+            }
+        }
+    }
+
+    const myChart = new Chart(document.getElementById('myChart'), chartConfig);
+</script>
+{% endblock %}
