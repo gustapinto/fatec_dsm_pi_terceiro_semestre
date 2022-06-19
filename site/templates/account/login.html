@@ -12,6 +12,15 @@
             <img src="{% static 'img_pokebola.png' %}" class="img-lateral">
         </div>
         <div class="col-12 col-md-6">
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ error|capfirst }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                </div>
+                {%endfor%}
+            {% endif %}
+
             <p>
                 <h1 class="w-100 mb-0">
                     Bem vindo de volta!
@@ -21,8 +30,8 @@
             <form method="post">
                 {% csrf_token %}
 
-                <input type="email" name="login" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf0e0; Login" style="font-family:Roboto, FontAwesome">
-                <input type="password" name="password" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Roboto, FontAwesome">
+                <input type="email" name="login" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf0e0; Login" style="font-family:Roboto, FontAwesome" required>
+                <input type="password" name="password" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Roboto, FontAwesome" required>
 
                 <button class="btn btn-primary align-self-center d-block mx-auto my-3 btn-lg rounded-4" type="submit">
                     Entrar

@@ -12,6 +12,24 @@
             <img src="{% static 'img_pokebola.png' %}" class="img-lateral">
         </div>
         <div class="col-12 col-md-6">
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ error|capfirst }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                </div>
+                {%endfor%}
+            {% endif %}
+
+            {% for field in form %}
+                {% if field.errors %}
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ field.errors|capfirst }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                </div>
+                {% endif %}
+            {% endfor %}
+
             <p>
                 <h1 class="w-100 mb-0">
                     Bem vindo!
@@ -22,10 +40,10 @@
             <form method="post" class="">
                 {% csrf_token %}
 
-                <input type="text" name="username" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf007; Usuário" style="font-family:Roboto, FontAwesome">
-                <input type="email" name="email" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf0e0; E-mail" style="font-family:Roboto, FontAwesome">
-                <input type="password" name="password1" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Roboto, FontAwesome">
-                <input type="password" name="" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Repetir senha" style="font-family:Roboto, FontAwesome">
+                <input type="text" name="username" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf007; Usuário" style="font-family:Roboto, FontAwesome" required>
+                <input type="email" name="email" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf0e0; E-mail" style="font-family:Roboto, FontAwesome" required>
+                <input type="password" name="password1" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Senha" style="font-family:Roboto, FontAwesome" required>
+                <input type="password" name="" class="form-control mb-2 rounded-4 border-primary" placeholder="&#xf023; Repetir senha" style="font-family:Roboto, FontAwesome" required>
 
                 <button class="btn btn-primary align-self-center d-block mx-auto my-3 btn-lg rounded-4" type="submit">
                     Cadastrar
