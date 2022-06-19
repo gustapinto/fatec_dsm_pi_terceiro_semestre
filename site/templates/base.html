@@ -12,228 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --cinza-claro: #ebebeb;
-            --cinza-escuro: #1c1d21;
-            --cinza-escuro-bg:  #2d2d2d;
-            --azul-escuro: #01558D;
-            --branco: #fff;
-        }
-
-        body {
-            background-color: var(--cinza-claro);
-            font-family: 'Roboto', sans-serif !important;
-            color:  var(--cinza-escuro) !important;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Nunito', sans-serif;
-        }
-
-        h1 {
-            font-size: 60px !important;
-        }
-
-        hr {
-            margin:  auto;
-            color: var(--azul-escuro);
-            background-color: var(--azul-escuro);
-            height: 2px;
-            border: 0 none;
-        }
-
-        .call {
-            padding-left: 2em;
-            padding-right: 2em;
-            font-weight: bolder;
-        }
-
-        .img-lateral {
-            width: 100%;
-            margin-top: -4em;
-        }
-
-        .bg-cinza-escuro {
-            background-color: var(--cinza-escuro-bg) !important;
-            color: var(--branco) !important;
-        }
-
-        .btn-pill-navbar {
-            font-weight: bold !important;
-            padding-left: 2em !important;
-            padding-right: 2em !important;
-            background-color: var(--branco) !important;
-            color: var(--azul-escuro) !important;
-            border-radius: 10em !important;
-        }
-
-        .btn-circle-navbar {
-            font-weight: bold !important;
-            background-color: var(--branco) !important;
-            color: var(--azul-escuro);
-            border-radius: 10em !important;
-            margin-right: 0.5em;
-            margin-left: 0.5em;
-            width: 2.7em;
-        }
-
-        ._mt-10 {
-            margin-top: 10em !important;
-        }
-
-        ._pd-10 {
-            padding-top: 5em !important;
-            padding-bottom: 5em !important;
-        }
-
-        ._mx-10 {
-            margin-right: 10em;
-            margin-left: 10em;
-        }
-
-        .grupo-cards {
-            background-color: var(--cinza-escuro-bg) !important;
-        }
-
-        .btn-primary {
-            font-weight: bold !important;
-            padding-left: 2em !important;
-            padding-right: 2em !important;
-        }
-
-        .bg-primary,
-        .btn-primary {
-            background-color: var(--azul-escuro) !important;
-        }
-
-        .border-primary,
-        .btn-primary {
-            border-color: var(--azul-escuro) !important;
-        }
-
-        .form-control {
-            color: var(--cinza-escuro) !important;
-        }
-
-        .navbar-brand {
-            color:  var(--cinza-claro) !important;
-        }
-        
-        .center{
-            text-align:center;
-            width:100%;
-        }
-        .accordion-button{
-            
-        }
-        .aumentaH6{
-            font-size:22px !important;
-        }
-        .letterThin{
-            font-size:18px !important;
-            font-family:Robot !important;
-        }
-        .card{
-            text-align:left;
-            color:white;
-            background: #2d2d2d;!important;
-            width:300px !important;
-               
-        }
-        .list-group {
-            --bs-list-group-border-color: none !important;
-        }
-        .list-group-item{
-            color:white !important;
-            background: #2d2d2d!important;
-            padding-left:20px;
-            padding-right:20px;
-
-        }
-        .h31{
-            padding-top:20px;
-            padding-bottom:20px;
-            font-size:45px;
-            font-weight: bold!important;
-        }
-
-        .h33{
-            padding-left:10px;
-            padding-right:10px;
-            font-weight: bold!important;
-            
-        }
-        .top{
-            margin-left:20px;
-            margin-bottom:50px;
-            margin-top:50px;
-            
-        }
-        .top1{
-            margin-right:20px;
-            margin-bottom:50px;
-            margin-top:50px;  
-        }
-        aumenta{
-            font-size:25px;
-            font-weight: bold!important;
-            padding-left:15px;   
-        }
-       
-        .parag{
-            font-size:23px;
-            font-weight: normal!important;
-            padding-bottom:10px;
-            padding-top:10px;
-            
-        }
-        .bold{
-            font-weight: bold!important;
-            margin-top:20px!important;
-            align-text:left;
-        }
-        #footer-copyright{
-            background:#01558D!important;
-            color: white;
-            padding-top:5px;
-            margin-bottom:0px!important;
-            font-family: 'Roboto', sans-serif !important;
-        }
-        .fa-solid{
-            padding-right:10px;
-            padding-left:15px;
-    
-        }
-        .alinha{
-            padding-left:150px;
-            margin-top:50px!important;
-        }
-        .pinkcor{
-            color: rgb(255, 99, 132 );
-        }
-        .oranjcor{
-            color: rgb(255, 159, 64 );
-        }
-        .yellowcor{
-            color: rgb(255, 205, 86 );
-        }
-        
-        .turqcor{
-            color: rgb(75, 192, 192 );
-        }
-        .blue{
-            color:rgb(54, 162, 235 );
-        }
-        .purpcor{
-            color:rgb(153, 102, 255 );
-        }
-        .graycor{
-            color:rgb(201, 203, 207 );
-        }
-        
-    </style>
-    </style>
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
 
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -244,28 +23,37 @@
                 <a class="navbar-brand" href="{% url 'pages:home' %}">Anitrends</a>
                 <ul class="navbar-nav">
                     <li class="nav-item" >
-                         <a class="nav-link btn btn-circle-navbar" href="{% url 'faq:faq' %}" >
-                             <i class="fa-solid fa-question"></i>
-                         </a>
+                        <a class="nav-link" href="{% url 'faq:faq' %}" >
+                            <svg width="45" height="45" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0751 8.66667C10.4593 8.00244 11.1775 7.55556 12 7.55556C13.2273 7.55556 14.2222 8.55048 14.2222 9.77778C14.2222 11.0051 13.2273 12 12 12L12 13.1111M12 16.4444V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#01558D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link btn btn-circle-navbar" href="{% url 'configurat:configurat' %}" >
-                                <i class="fa-solid fa-gear"></i>
+                            <a class="nav-link" href="{% url 'configurat:configurat' %}" >
+                                <svg width="45" height="45" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.709 7.56191L21.0091 6.4381C20.417 5.48718 19.1049 5.15914 18.0758 5.70476C17.586 5.97178 17.0015 6.04753 16.4512 5.91532C15.901 5.78311 15.4301 5.4538 15.1425 5C14.9575 4.71156 14.8581 4.38302 14.8544 4.04762C14.8711 3.50988 14.6518 2.98879 14.2466 2.60305C13.8414 2.21731 13.2847 1.99978 12.7033 2H11.2933C10.7237 2 10.1776 2.21001 9.77586 2.58357C9.37409 2.95713 9.14976 3.46345 9.1525 3.99048C9.13561 5.07861 8.17748 5.95249 7.00143 5.95238C6.63897 5.9489 6.28392 5.85691 5.97221 5.68571C4.94317 5.14009 3.63103 5.46813 3.03894 6.41905L2.28761 7.56191C1.69623 8.51163 2.04592 9.72505 3.06981 10.2762C3.73536 10.6318 4.14536 11.2889 4.14536 12C4.14536 12.7111 3.73536 13.3682 3.06981 13.7238C2.04722 14.2712 1.69715 15.4817 2.28761 16.4286L2.99777 17.5619C3.27519 18.0251 3.74065 18.3669 4.29115 18.5117C4.84166 18.6565 5.43182 18.5923 5.93104 18.3333C6.4218 18.0683 7.00663 17.9957 7.55551 18.1317C8.1044 18.2676 8.57187 18.6008 8.85402 19.0571C9.03903 19.3456 9.13844 19.6741 9.1422 20.0095C9.1422 21.1088 10.1053 22 11.2933 22H12.7033C13.8873 22 14.8487 21.1146 14.8544 20.019C14.8516 19.4904 15.0774 18.9826 15.4814 18.6088C15.8854 18.2349 16.4341 18.026 17.0054 18.0286C17.367 18.0375 17.7206 18.1291 18.0347 18.2952C19.061 18.8425 20.3723 18.5189 20.9679 17.5714L21.709 16.4286C21.9958 15.973 22.0745 15.4304 21.9277 14.9209C21.7809 14.4115 21.4207 13.9772 20.9268 13.7143C20.4329 13.4514 20.0726 13.0171 19.9258 12.5076C19.779 11.9982 19.8577 11.4556 20.1446 11C20.3311 10.6987 20.6011 10.4488 20.9268 10.2762C21.9445 9.72535 22.2934 8.51902 21.709 7.57143V7.56191Z" stroke="#01558D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.0034 14.7427C13.6404 14.7427 14.9674 13.5147 14.9674 12C14.9674 10.4852 13.6404 9.25729 12.0034 9.25729C10.3665 9.25729 9.03944 10.4852 9.03944 12C9.03944 13.5147 10.3665 14.7427 12.0034 14.7427Z" stroke="#01558D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </a>
                        </li>
                        <li class="nav-item">
                             <form method="post" action="{% url 'account_logout' %}">
                                 {% csrf_token %}
-                                <button type="submit" class="nav-link btn btn-circle-navbar text-danger">
-                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                <button type="submit" class="nav-link" style="background-color: transparent; border: none">
+                                    <svg width="42" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 12L15.7071 12.7071C16.0976 12.3166 16.0976 11.6834 15.7071 11.2929L15 12ZM11.7071 7.29289C11.3166 6.90237 10.6834 6.90237 10.2929 7.29289C9.90237 7.68342 9.90237 8.31658 10.2929 8.70711L11.7071 7.29289ZM10.2929 15.2929C9.90237 15.6834 9.90237 16.3166 10.2929 16.7071C10.6834 17.0976 11.3166 17.0976 11.7071 16.7071L10.2929 15.2929ZM2 11C1.44772 11 1 11.4477 1 12C1 12.5523 1.44772 13 2 13V11ZM3.74844 15.5996C3.52732 15.0935 2.9378 14.8625 2.43172 15.0836C1.92563 15.3048 1.69462 15.8943 1.91573 16.4004L3.74844 15.5996ZM1.91573 7.59963C1.69462 8.10572 1.92563 8.69523 2.43172 8.91635C2.9378 9.13747 3.52732 8.90646 3.74844 8.40037L1.91573 7.59963ZM21 12C21 16.9706 16.9706 21 12 21V23C18.0751 23 23 18.0751 23 12H21ZM12 3C16.9706 3 21 7.02944 21 12H23C23 5.92487 18.0751 1 12 1V3ZM15.7071 11.2929L11.7071 7.29289L10.2929 8.70711L14.2929 12.7071L15.7071 11.2929ZM14.2929 11.2929L10.2929 15.2929L11.7071 16.7071L15.7071 12.7071L14.2929 11.2929ZM2 13H15V11H2V13ZM12 21C8.31098 21 5.13816 18.7803 3.74844 15.5996L1.91573 16.4004C3.61225 20.2833 7.48774 23 12 23V21ZM3.74844 8.40037C5.13816 5.21965 8.31098 3 12 3V1C7.48774 1 3.61225 3.71673 1.91573 7.59963L3.74844 8.40037Z" fill="#fff"/>
+                                    </svg>
                                 </button>
                             </form>
                         </li>
                     {% elif  user.authenticated %}
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link btn btn-pill-navbar" href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-link btn btn-pill-navbar" href="{% url 'account_login' %}" style="height: 40px; margin-top: 10px">
+                                Login
+                            </a>
                         </li>
                     {% endif %}
                 </ul>
@@ -280,35 +68,35 @@
         <div class="main-footer widgets-dark typo-light">
         <div class="container">
         <div class="row">
-        
+
         <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="widget subscribe no-box">
         <h4 class="widget-title"><span></span></h4>
         <p> </p>
         </div>
         </div>
-        
-          
+
+
         <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="widget no-box">
         <h5 class="widget-title"><span></span></h5>
-        
+
         </div>
         </div>
         <br>
         <br>
-        
+
         <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="widget no-box">
         <h5 class="widget-title"><span></span></h5>
                     <p></p>
-     
+
         </div>
         </div>
         </div>
         </div>
         </div>
-          
+
         <div class="footer-copyright">
         <div class="container">
         <div class="row">
@@ -319,7 +107,7 @@
         </div>
         </div>
     </footer>
-  
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
