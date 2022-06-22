@@ -21,8 +21,8 @@ def main():
     ingestor = JikanIngestor(carregador)
 
     while True:
-        ids = ingestor.ingerir_animes_populares()
-        ingestor.ingerir_estatisticas(ids)
+        dados = ingestor.ingerir_animes_populares()
+        ingestor.ingerir_estatisticas(dados)
         sleep(300)
 
 

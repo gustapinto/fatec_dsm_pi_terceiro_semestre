@@ -75,6 +75,8 @@
 <script src="{% static 'js/js.js' %}"></script>
 
 <script>
+    console.log(JSON.parse("{{ chart_data|escapejs }}"))
+
     const chartConfig = {
         type: 'bar',
         data: JSON.parse("{{ chart_data|escapejs }}"),

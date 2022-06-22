@@ -11,12 +11,12 @@ class JikanIngestor:
         animes = self.extrator.obtem_animes_populares(50)
         self.carregador.salvar('populares', animes)
 
-        return [anime['id'] for anime in animes]
+        return [(anime['id'], anime['nome']) for anime in animes]
 
-    def ingerir_estatisticas(self, ids):
+    def ingerir_estatisticas(self, dados):
         estatisticas = []
-        for id in ids:
-            estatistica = self.extrator.obtem_estatisticas_anime(id)
+        for id, name in dados:
+            estatistica = self.extrator.obtem_estatisticas_anime(id, name)
             if not estatistica:
                 continue
             estatisticas.append(estatistica)

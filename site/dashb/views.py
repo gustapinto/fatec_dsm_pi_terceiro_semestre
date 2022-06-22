@@ -5,6 +5,8 @@ from random import randint
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
+from .mongo import MongoConnector
+
 @dataclass
 class DashboardDataset:
     label_data_relation: list
@@ -33,19 +35,10 @@ class DashbView(TemplateView):
     template_name = "dashb.html"
 
     def get_context_data(self, **kwargs):
-        dataset = DashboardDataset([
-            ('Spy x Family', 314),
-            ('Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu', 64),
-            ('Kaguya-sama wa Kokurasetai: Ultra Romantic', 44),
-            ('Aharen-san wa Hakarenai', 41),
-            ('Tate no Yuusha no Nariagari Season 2', 35),
-            ('Tomodachi Game', 22),
-            ('Agotome Game Sekai wa Mob ni Kibishii Sekai desuo', 22)
-        ])
+        connector = MongoConnector()
 
-        chart_data = {
-            'datasets': [dataset.as_dict()]
-        }
+        mongo_data = connector.obtem_dados_grafico()
+        chart_data = {'datasets': [DashboardDataset(mongo_data).as_dict()]}
 
         context = super(DashbView, self).get_context_data(**kwargs)
         context['chart_data'] = dumps(chart_data)

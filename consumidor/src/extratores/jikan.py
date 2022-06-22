@@ -36,7 +36,7 @@ class JikanExtrator:
 
         return ids[:qtd]
 
-    def obtem_estatisticas_anime(self, id):
+    def obtem_estatisticas_anime(self, id, name):
         url = f'{self.URL}/anime/{id}/statistics'
 
         logging.info(f'Extraindo estatisticas do anime {id}')
@@ -47,5 +47,6 @@ class JikanExtrator:
 
         rjson = r.json()
         estatisticas = rjson['data']
+        estatisticas['title'] = name
 
         return estatisticas
