@@ -4,8 +4,30 @@ from random import randint
 
 from django.http import HttpResponse
 from django.views.generic import TemplateView
+from bson.json_util import dumps
+from pymongo import MongoClient, DESCENDING
 
-from .mongo import MongoConnector
+
+class MongoConnector:
+    @property
+    def cliente(self):
+        return MongoClient('mongodb://consumidor:consumidor@mongo:27017')
+
+    def __formata_estatistica(self, estatistica):
+        return (estatistica['title'], estatistica['completed'])
+
+    def obtem_dados_grafico(self):
+        colecao = self.cliente['animes']['estatisticas']
+
+        nomes = colecao.find({'title': {'$exists': True}}) \
+                              .sort([('completed', DESCENDING)]) \
+                              .distinct('title')
+        totais = colecao.find({'title': {'$exists': True}}) \
+                              .sort([('completed', DESCENDING)]) \
+                              .distinct('completed')
+
+        return [(n, t) for n, t in zip(nomes[:25], totais[:25])]
+
 
 @dataclass
 class DashboardDataset:
