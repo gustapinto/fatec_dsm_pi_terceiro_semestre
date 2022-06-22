@@ -31,42 +31,26 @@
     <h1 class="bold">Ranking de Visualização</h1>
     <div class="row">
 
-        <div class="col bg-cinza-escuro rounded-4  top1">
-            <br>
-
-            <h2>Sempre no topo</h2>
-            <div class="parag">
-                <p><aumenta>1°</aumenta> Fullmetal Alchemist: Brotherhood</p>
-                <p><aumenta>2°</aumenta> Gintama°</p>
-                <p><aumenta>3°</aumenta> Steins;Gate</p>
-                <p><aumenta>4°</aumenta> Shingeki no Kyojin Season 3 Part 2</p>
-                <p><aumenta>5°</aumenta> Gintama'</p>
-                <p><aumenta>6°</aumenta> Gintama: The Final </p>
-                <p><aumenta>7°</aumenta> Hunter x Hunter (2011)</p>
-                <p><aumenta>8°</aumenta> Fruits Basket: The Final </p>
-                <p><aumenta>9°</aumenta> Gintama': Enchousen </p>
-                <p><aumenta>10°</aumenta> Ginga Eiyuu Densetsu </p>
-            </div>
-
+        <div class="col bg-cinza-escuro rounded-4 top1 p-4">
+            <h2>
+                Sempre no topo
+            </h2>
+            <ol class="parag mx-3">
+                {% for anime in animes %}
+                    <li>{{ anime }}</li>
+                {% endfor %}
+            </ol>
         </div>
 
-        <div class="col bg-cinza-escuro rounded-4  top">
-            <br>
-            <h2>Novidades da semana</h2>
-            <div class="parag">
-                <p><aumenta>1º</aumenta> Spy x Family</p>
-                <p><aumenta>2º</aumenta> Tate no Yuusha no Nariagari Season 2</p>
-                <p><aumenta>3º</aumenta> Kaguya-sama wa Kokurasetai: Ultra Romantic</p>
-                <p><aumenta>4º</aumenta> Kawaii dake ja Nai Shikimori-san</p>
-                <p><aumenta>5º</aumenta> Komi-san wa, Comyushou desu. 2nd Season</p>
-                <p><aumenta>6º</aumenta> Aharen-san wa Hakarenai</p>
-                <p><aumenta>7º</aumenta> Summertime Render</p>
-                <p><aumenta>8º</aumenta> Tomodachi Game</p>
-                <p><aumenta>9º</aumenta> Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu</p>
-                <p><aumenta>10º</aumenta> Yuusha, Yamemasu</p>
-
-            </div>
-
+        <div class="col bg-cinza-escuro rounded-4 top p-4">
+            <h2>
+                Novidades da semana
+            </h2>
+            <ol class="parag mx-3">
+                {% for anime in animes %}
+                    <li>{{ anime }}</li>
+                {% endfor %}
+            </ol>
         </div>
     </div>
 </div>
