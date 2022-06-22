@@ -1,0 +1,38 @@
+version: "3.6"
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    command: /bin/bash "start.sh"
+    working_dir: /anitrends
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/anitrends:Z
+      - ./anitrends/consumidor:/consumidor:Z
+      - ./anitrends/site:/site:Z
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - /tmp/pi_3_dsm_db/:/data/db:Z
+    networks:
+      - backend
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: consumidor
+      MONGO_INITDB_ROOT_PASSWORD: consumidor
+      MONGO_INITDB_DATABASE: admin
+
+networks:
+  backend:
+    driver: bridge
