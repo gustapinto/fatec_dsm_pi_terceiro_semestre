@@ -1,5 +1,11 @@
 # Anitrends
 
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=&message=Python&color=gray&style=for-the-badge&logo=Python">
+  <img src="https://img.shields.io/static/v1?label=&message=Django&color=gray&style=for-the-badge&logo=Django">
+  <img src="https://img.shields.io/static/v1?label=&message=Mongo%20DB&color=gray&style=for-the-badge&logo=Mongodb">
+</p>
+
 ## Conhecendo o projeto
 Uma pĺataforma de análise de dados de visualização de animes, fornecendo métricas e tendências para auxiliar lojistas e consumidores sobre em qual série de produtos (estoque) comprar. Para mais informações sobre o projeto visite:
 - [Trello e próximos objetivos](https://trello.com/b/5XD3KYVv/kanban-quadro-modelo)
