@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/static/v1?label=&message=Python&color=gray&style=for-the-badge&logo=Python">
   <img src="https://img.shields.io/static/v1?label=&message=Django&color=gray&style=for-the-badge&logo=Django">
   <img src="https://img.shields.io/static/v1?label=&message=Mongo%20DB&color=gray&style=for-the-badge&logo=Mongodb">
+  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&color=gray">
 </p>
 
 ## Conhecendo o projeto
@@ -19,12 +20,15 @@ Para as instruções de instalação do Anitrends em ambiente de desenvolvimento
 ## Criado por
 <p align="center">
   <a href="https://github.com/gustapinto">
-    <img src="https://avatars.githubusercontent.com/gustapinto" width="25%">
+    <img src="https://avatars.githubusercontent.com/gustapinto" width="20%">
   </a>
   <a href="https://github.com/JozianeNascimento">
-    <img src="https://avatars.githubusercontent.com/JozianeNascimento" width="25%">
+    <img src="https://avatars.githubusercontent.com/JozianeNascimento" width="20%">
+  </a>
+  <a href="https://github.com/LuizViniciusdeCampos">
+    <img src="https://avatars.githubusercontent.com/LuizViniciusdeCampos" width="20%">
   </a>
   <a href="https://github.com/endeu">
-    <img src="https://avatars.githubusercontent.com/endeu" width="25%">
+    <img src="https://avatars.githubusercontent.com/endeu" width="20%">
   </a>
 </p>
